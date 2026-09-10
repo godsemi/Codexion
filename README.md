@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/31735919/README.md)
 # Codexion
 
 *Este proyecto ha sido creado como parte del currículo de 42 por jopaz-su*
@@ -344,12 +343,12 @@ Por ejemplo, conceptualmente:
 ```text
 Coder A                    Coder B
    │                          │
-   ├── lock                  │
+   ├── lock                   │
    │                          ├── espera
-   │
-   ├── comprueba dongles     │
-   ├── adquiere dongles      │
-   ├── unlock                │
+   │                          │
+   ├── comprueba dongles      │
+   ├── adquiere dongles       │
+   ├── unlock                 │
    │                          ├── lock
    │                          └── comprueba nuevo estado
 ```
