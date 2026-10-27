@@ -74,28 +74,3 @@ t_request	*find_coder_request(t_heap *heap, t_coder *coder)
 	}
 	return (NULL);
 }
-
-int	has_dongle_priority(t_coder *coder, int dongle_id)
-{
-	t_heap		*heap;
-	t_request	*mine;
-	t_request	*request;
-	int			i;
-
-	heap = coder->sim->heap;
-	mine = find_coder_request(heap, coder);
-	if (!mine)
-		return (0);
-	i = 0;
-	while (i < heap->size)
-	{
-		request = &heap->requests[i];
-		if (request->coder != coder
-			&& (request->left_dongle == dongle_id
-				|| request->right_dongle == dongle_id)
-			&& request_has_priority(coder->sim, request, mine))
-			return (0);
-		i++;
-	}
-	return (1);
-}
