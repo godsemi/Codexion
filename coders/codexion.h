@@ -109,7 +109,6 @@ void			add_request(t_coder *coder);
 int				can_take_dongles(t_coder *coder);
 int				is_next_request(t_coder *coder);
 void			remove_request(t_sim *sim, t_coder *coder);
-int				has_dongle_priority(t_coder *coder, int dongle_id);
 int				can_grant_request(t_sim *sim, t_request *request);
 int				request_can_run(t_coder *coder);
 int				is_best_available_request(t_coder *coder);
